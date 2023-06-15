@@ -27,11 +27,7 @@ function App() {
   const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
-        <Route
-          path="/homepage"
-          element={<Homepage />}
-          loader={productsData}
-        ></Route>
+        <Route index element={<Homepage />} loader={productsData}></Route>
         <Route path="/products" element={<Products />}></Route>
         <Route path="/categories" element={<Categories />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
