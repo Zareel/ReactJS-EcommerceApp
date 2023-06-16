@@ -13,11 +13,11 @@ const Navbar = () => {
   return (
     <div className="w-full sticky top-0 z-50 bg-[#111111] ">
       <nav
-        className={`max-w-7xl mx-auto  py-6 px-4 flex justify-between lg:justify-center items-center  gap-4 transition-all ease-in duration-500 ${
+        className={`max-w-8xl mx-auto  py-6 px-6 pr-14 flex justify-between lg:justify-center items-center  gap-4 transition-all ease-in duration-500 ${
           extendNavbar ? "pb-44" : "pb-6"
         }`}
       >
-        <h1 className=" text-2xl md:text-3xl text-gray-300 font-roboto px-6x lg:px-14 ml-2 cursor-pointer ">
+        <h1 className=" text-2xl md:text-3xl text-gray-300 font-roboto px-6x lg:px-14 lg:pr-56 ml-2 cursor-pointer ">
           ClickTo<span className="text-green-500">Cart</span>
         </h1>
         <div className="h-10 hidden relative  rounded-md xl:flex flex-grow items-center  bg-gray-100 text-black cursor-pointer  ">
@@ -77,6 +77,18 @@ const Navbar = () => {
               className="cursor-pointer font-poppins text-lg  text-gray-300 hover:text-white active:text-green-500  duration-300"
             >
               Products
+            </Link>
+            <Link
+              to="/login"
+              className="cursor-pointer font-poppins text-lg  text-gray-300 hover:text-white active:text-green-500  duration-300"
+            >
+              Login
+            </Link>
+            <Link
+              to="/signup"
+              className="cursor-pointer font-poppins text-lg bg-gray-300  text-gray-600 hover:text-gray-800 active:text-green-500  duration-300 font-semibold px-4 py-1  mr-4 rounded-sm"
+            >
+              SignUp
             </Link>
           </div>
         </div>

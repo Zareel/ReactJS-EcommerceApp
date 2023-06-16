@@ -12,6 +12,8 @@ import Categories from "./pages/Categories";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import PageNotFound from "./pages/PageNotFound";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 import { productsData } from "./api/api";
 
 const Layout = () => {
@@ -31,6 +33,8 @@ function App() {
         <Route path="/products" element={<Products />}></Route>
         <Route path="/categories" element={<Categories />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Route>
     )

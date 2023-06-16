@@ -10,7 +10,7 @@ const ProductsDisplay = () => {
 
   return (
     <div className="w-[100vw] h-auto">
-      <div className="max-w-screen-2xl mx-auto grid grid-cols-4 gap-10 p-6">
+      <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-10 p-6">
         {productData.map((item) => {
           return (
             <div
