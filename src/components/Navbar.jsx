@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="w-full sticky top-0 z-50 bg-[#111111] ">
       <nav
         className={`max-w-8xl mx-auto  py-6 px-6 pr-14 flex justify-between lg:justify-center items-center  gap-4 transition-all ease-in duration-500 ${
-          extendNavbar ? "pb-44" : "pb-6"
+          extendNavbar ? "pb-60" : "pb-6"
         }`}
       >
         <h1 className=" text-2xl md:text-3xl text-gray-300 font-roboto px-6x lg:px-14 lg:pr-56 ml-2 cursor-pointer ">
@@ -55,7 +55,7 @@ const Navbar = () => {
           </span>
         </div>
         <div
-          className={`lg:static  w-full lg:w-auto min-h-[20vh]  lg:min-h-fit absolute  left-0  transition-all ease-in duration-500   ${
+          className={`lg:static  w-full lg:w-auto min-h-[2  0vh]  lg:min-h-fit absolute  left-0  transition-all ease-in duration-500   ${
             extendNavbar ? "top-20" : "top-20 left-[-135%]"
           } `}
         >
@@ -86,7 +86,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/signup"
-              className="cursor-pointer font-poppins text-lg bg-gray-300  text-gray-600 hover:text-gray-800 active:text-green-500  duration-300 font-semibold px-4 py-1  mr-4 rounded-sm"
+              className="cursor-pointer  font-poppins text-lg text-gray-300 lg:bg-gray-300  lg:text-gray-600 hover:text-gray-800 active:text-green-500  duration-300 lg:font-semibold lg:px-4 py-1  mr-4 rounded-sm"
             >
               SignUp
             </Link>
