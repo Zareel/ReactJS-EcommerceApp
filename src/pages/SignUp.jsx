@@ -75,6 +75,7 @@ const SignUp = () => {
           </div>
           <input
             onChange={handleName}
+            value={clientName}
             type="text"
             placeholder="Name"
             className="border-none outline-none my-2 drop-shadow-lg w-full px-2 py-2 rounded-sm"
@@ -83,6 +84,7 @@ const SignUp = () => {
           <br />
           <input
             onChange={handleEmail}
+            value={email}
             type="email"
             placeholder="email"
             className=" border-none outline-none my-2 drop-shadow-lg w-full px-2 py-2 rounded-sm lowercase"
@@ -97,6 +99,7 @@ const SignUp = () => {
 
           <input
             onChange={handlePassword}
+            value={password}
             type="password"
             placeholder="Password"
             className="border-none outline-none my-2 drop-shadow-lg w-full px-2 py-2 rounded-sm"
@@ -109,6 +112,7 @@ const SignUp = () => {
           <br />
           <input
             onChange={handleMobileNumber}
+            value={mobile}
             type="text"
             placeholder="Mobile number"
             className="border-none outline-none my-2 drop-shadow-md w-full px-2 py-2 rounded-sm"
@@ -116,6 +120,7 @@ const SignUp = () => {
           <br />
           <input
             onChange={handleAddress}
+            value={address}
             type="text"
             placeholder="Address"
             className="border-none outline-none my-2 drop-shadow-md w-full px-2 py-2 rounded-sm"
