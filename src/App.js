@@ -29,13 +29,13 @@ function App() {
   const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
-        <Route index element={<Homepage />} loader={productsData}></Route>
-        <Route path="/products" element={<Products />}></Route>
-        <Route path="/categories" element={<Categories />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="*" element={<PageNotFound />}></Route>
+        <Route index element={<Homepage />} loader={productsData} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     )
   );
