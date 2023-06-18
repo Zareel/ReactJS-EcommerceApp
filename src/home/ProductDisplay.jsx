@@ -2,8 +2,11 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/storeSlice";
 
 const ProductsDisplay = () => {
+  const dispatch = useDispatch();
   const data = useLoaderData();
   const productData = data.data;
   //console.log(productData);
@@ -46,7 +49,22 @@ const ProductsDisplay = () => {
                   <StarIcon />
                   <StarHalfIcon />
                 </div>
-                <button className="mt-4 w-full flex justify-center text-lg font-semibold  font-poppins bg-gray-200 text-gray-500 hover:bg-gray-300 active:bg-gray-400 py-2 px-2">
+                <button
+                  onClick={() =>
+                    dispatch(
+                      addToCart({
+                        id: item.id,
+                        title: item.title,
+                        description: item.description,
+                        price: item.price,
+                        category: item.category,
+                        image: item.image,
+                        quantity: 1,
+                      })
+                    )
+                  }
+                  className="mt-4 w-full flex justify-center text-lg font-semibold  font-poppins bg-gray-200 text-gray-500 hover:bg-gray-300 active:bg-gray-400 py-2 px-2"
+                >
                   Add to Cart
                 </button>
               </div>

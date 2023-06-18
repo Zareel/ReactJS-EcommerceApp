@@ -6,10 +6,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { allListItems } from "../data/index";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [showList, setShowList] = useState(false);
   const [extendNavbar, setExtendNavbar] = useState(false);
+  const products = useSelector((state) => state.storeReducer.products);
+  console.log(products);
   return (
     <div className="w-full sticky top-0 z-50 bg-[#111111] ">
       <nav
@@ -98,8 +101,8 @@ const Navbar = () => {
             className="w-12 h-12 flex items-center cursor-pointer font-poppins  text-gray-300 hover:text-white active:text-green-500  duration-300 relative"
           >
             <LocalMallIcon style={{ fontSize: 30 }} />
-            <span className="bg-red-500 px-1 rounded-full text-white absolute top-[-1] right-2">
-              0
+            <span className="bg-green-600 px-1 rounded-full text-white absolute top-[-1] right-2">
+              {products.length > 0 ? products.length : 0}
             </span>
           </Link>
           <div
