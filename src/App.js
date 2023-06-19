@@ -6,6 +6,7 @@ import {
   Route,
   Outlet,
   RouterProvider,
+  ScrollRestoration,
 } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Categories from "./pages/Categories";
@@ -20,6 +21,7 @@ const Layout = () => {
   return (
     <div>
       <Navbar />
+      <ScrollRestoration />
       <Outlet />
       <Footer />
     </div>

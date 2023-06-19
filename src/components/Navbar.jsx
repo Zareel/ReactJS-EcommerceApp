@@ -12,7 +12,7 @@ const Navbar = () => {
   const [showList, setShowList] = useState(false);
   const [extendNavbar, setExtendNavbar] = useState(false);
   const products = useSelector((state) => state.storeReducer.products);
-  console.log(products);
+
   return (
     <div className="w-full sticky top-0 z-50 bg-[#111111] ">
       <nav
@@ -64,7 +64,7 @@ const Navbar = () => {
         >
           <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 ml-8">
             <Link
-              to="/homepage"
+              to="/"
               className="cursor-pointer font-poppins text-lg text-gray-300 hover:text-white active:text-green-500  duration-300"
             >
               Home
