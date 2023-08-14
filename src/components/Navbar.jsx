@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
         <div
           className={`lg:static  w-full lg:w-auto min-h-[2  0vh]  lg:min-h-fit absolute  left-0  transition-all ease-in duration-500   ${
-            extendNavbar ? "top-20" : "top-20 left-[-135%]"
+            extendNavbar ? "top-20 left-0" : "left-[-135%]"
           } `}
         >
           <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 ml-8">
@@ -109,7 +109,7 @@ const Navbar = () => {
             onClick={() => {
               setExtendNavbar((open) => !open);
             }}
-            className="text-3xl cursor-pointer lg:hidden mr-2 text-gray-200"
+            className="text-3xl cursor-pointer lg:hidden mr-2 text-gray-200 duration-300"
           >
             {extendNavbar ? <CloseIcon /> : <MenuIcon />}
           </div>

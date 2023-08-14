@@ -10,9 +10,9 @@ import {
 const Cart = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.storeReducer.products);
-  const [subTotal, setSubTotal] = useState("");
-  const [shippingCharge, setShippingCharge] = useState("");
-  const [total, setTotal] = useState("");
+  const [subTotal, setSubTotal] = useState();
+  const [shippingCharge, setShippingCharge] = useState();
+  const [total, setTotal] = useState();
 
   useEffect(() => {
     let price = 0;
@@ -24,7 +24,8 @@ const Cart = () => {
   }, [products]);
   useEffect(() => {
     setShippingCharge((subTotal * 0.05).toFixed(2));
-  }, [subTotal]);
+    setTotal(Number(subTotal) + Number(shippingCharge));
+  }, [subTotal, shippingCharge]);
   return (
     <div className="w-full h-full">
       {products.length > 0 ? (
@@ -109,7 +110,7 @@ const Cart = () => {
               </div>
             </div>
 
-            <div className="w-[300px] fixed right-56  col-span-1">
+            <div className="w-[350px] fixed right-56  col-span-1">
               <h1 className="font-roboto font-semibold text-xl py-2 ">
                 Cart Total
               </h1>
@@ -124,7 +125,7 @@ const Cart = () => {
                 </div>
                 <div className="w-full flex justify-between border-[1px] border-gray-400 px-2 py-1">
                   <p className="text-lg font-semibold text-gray-700">
-                    Shipping Charge
+                    Shipping Charge 5%
                   </p>
                   <p className="text-lg font-semibold text-gray-700">
                     ${shippingCharge}
@@ -132,7 +133,7 @@ const Cart = () => {
                 </div>
                 <div className="w-full flex justify-between border-[1px] border-gray-400 px-2 py-1">
                   <p className="text-lg font-bold">Total</p>
-                  <p className="text-lg font-bold">${subTotal}</p>
+                  <p className="text-lg font-bold">${total}</p>
                 </div>
               </div>
               <button className="w-full bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-500 text-lg font-semibold py-1 text-white">

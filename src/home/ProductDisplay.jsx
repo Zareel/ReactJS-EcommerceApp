@@ -4,6 +4,7 @@ import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/storeSlice";
+import { Link } from "react-router-dom";
 
 const ProductsDisplay = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,9 @@ const ProductsDisplay = () => {
 
   return (
     <div className="w-[100vw] h-auto">
+      <h1 className="text-4xl text-center text-gray-800 font-semibold font-roboto py-10">
+        Our Choice
+      </h1>
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-10 p-6">
         {productData.map((item) => {
           return (
@@ -20,13 +24,16 @@ const ProductsDisplay = () => {
               key={item.id}
               className="bg-white h-auto border-[1px] py-6 z-30 shadow-lg rounded-md hover:shadow-xl cursor-pointer relative flex flex-col gap-4 "
             >
-              <div className="w-full h-auto flex items-center justify-center">
+              <Link
+                to="/products"
+                className="w-full h-auto flex items-center justify-center"
+              >
                 <img
                   className="w-56 h-64 object-contain "
                   src={item.image}
                   alt="ProductImg"
                 />
-              </div>
+              </Link>
               <span className="absolute top-1 right-2 text-gray-500 italic">
                 {item.category}
               </span>
